@@ -133,4 +133,8 @@
     <!-- QS footer warnings -->
     <string name="qs_footer_warnings_title">Footer alerts</string>
     <string name="qs_footer_warnings_summary">Display an alert at bottom of QS panel when network is monitored by external apps or VPN</string>
+
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Reset stats</string>
+    <string name="battery_stats_message">Battery history stats are going to be reset</string>
 </resources>
