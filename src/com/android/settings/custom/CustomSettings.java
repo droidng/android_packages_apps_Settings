@@ -46,6 +46,7 @@ public class CustomSettings extends DashboardFragment implements
     private static final String KEY_FORCE_FULL_SCREEN = "display_cutout_force_fullscreen_settings";
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
     private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
+    private static final String KEY_SHOW_ROAMING = "roaming_indicator_icon";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
@@ -53,6 +54,7 @@ public class CustomSettings extends DashboardFragment implements
     private SwitchPreference mShowCutoutForce;
     private SwitchPreference mGamesSpoof;
     private CustomSystemSeekBarPreference mVolteIconStyle;
+    private SwitchPreference mShowRoaming;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,10 +62,12 @@ public class CustomSettings extends DashboardFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
 	mCombinedIcons = (SwitchPreference) findPreference(KEY_COMBINED_ICONS);
 	mVolteIconStyle = (CustomSystemSeekBarPreference) findPreference(KEY_VOLTE_ICON_STYLE);
+	mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
 
 	if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mCombinedIcons);
 	    prefScreen.removePreference(mVolteIconStyle);
+	    prefScreen.removePreference(mShowRoaming);
 	}
         Context mContext = getActivity().getApplicationContext();
 
@@ -117,6 +121,7 @@ public class CustomSettings extends DashboardFragment implements
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(KEY_COMBINED_ICONS);
 			keys.add(KEY_VOLTE_ICON_STYLE);
+			keys.add(KEY_SHOW_ROAMING);
                     }
 
 	            final String displayCutout = context.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
