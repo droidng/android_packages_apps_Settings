@@ -97,4 +97,11 @@
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
             android:defaultValue="true"/>
+	
+	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	    android:key="lockscreen_battery_info"
+            android:icon="@drawable/ic_battery_charging"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
 </PreferenceScreen>
