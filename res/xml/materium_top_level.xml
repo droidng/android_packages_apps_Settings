@@ -151,4 +151,11 @@
             android:title="@string/hwkeys_disabled_title"
             android:summary="@string/hwkeys_disabled_summary"
 	    android:defaultValue="false" />
+
+	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_warnings"
+            android:icon="@drawable/ic_key"
+            android:title="@string/qs_footer_warnings_title"
+            android:summary="@string/qs_footer_warnings_summary"
+            android:defaultValue="true"/>
 </PreferenceScreen>
