@@ -65,5 +65,15 @@
             android:key="use_games_spoof"
             android:icon="@drawable/ic_backup"
             android:title="@string/use_games_spoof_title"
-            android:summary="@string/use_games_spoof_summary" />
+	    android:summary="@string/use_games_spoof_summary" />
+
+        <org.eu.materium.support.preferences.CustomSystemSeekBarPreference
+            android:key="volte_icon_style"
+            android:icon="@drawable/ic_volte"
+            android:title="@string/volte_icon_title"
+            android:summary="@string/volte_icon_summary"
+            android:defaultValue="0"
+            android:max="9"
+            settings:min="0"
+            settings:units="" />
 </PreferenceScreen>

@@ -34,6 +34,8 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import org.eu.materium.support.preferences.CustomSystemSeekBarPreference;
+
 @SearchIndexable
 public class CustomSettings extends DashboardFragment implements
         Preference.OnPreferenceChangeListener {
@@ -43,21 +45,25 @@ public class CustomSettings extends DashboardFragment implements
     private static final String KEY_COMBINED_ICONS = "combined_status_bar_signal_icons";
     private static final String KEY_FORCE_FULL_SCREEN = "display_cutout_force_fullscreen_settings";
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
+    private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
     private SwitchPreference mCombinedIcons;
     private SwitchPreference mShowCutoutForce;
     private SwitchPreference mGamesSpoof;
+    private CustomSystemSeekBarPreference mVolteIconStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final PreferenceScreen prefScreen = getPreferenceScreen();
 	mCombinedIcons = (SwitchPreference) findPreference(KEY_COMBINED_ICONS);
+	mVolteIconStyle = (CustomSystemSeekBarPreference) findPreference(KEY_VOLTE_ICON_STYLE);
 
 	if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mCombinedIcons);
+	    prefScreen.removePreference(mVolteIconStyle);
 	}
         Context mContext = getActivity().getApplicationContext();
 
@@ -110,6 +116,7 @@ public class CustomSettings extends DashboardFragment implements
 
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(KEY_COMBINED_ICONS);
+			keys.add(KEY_VOLTE_ICON_STYLE);
                     }
 
 	            final String displayCutout = context.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
