@@ -23,7 +23,9 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/materium_logo"
-        android:key="materium_logo"/>
+        android:key="materium_logo"
+        android:clickable="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.MateriumLogoPreferenceController"/>
 
     <!-- Android version -->
     <Preference
