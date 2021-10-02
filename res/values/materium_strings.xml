@@ -21,4 +21,7 @@
     <string name="materium_maintainer" translatable="false">@string/materium_maintainer_unknown</string>
     <string name="materium_maintainer_unknown">Unknown</string>
     <string name="materium_maintainer_title">Device maintainer</string>
+
+    <!-- Settings version info -->
+    <string name="materium_version">Materium version</string>
 </resources>
