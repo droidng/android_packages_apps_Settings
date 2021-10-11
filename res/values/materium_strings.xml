@@ -16,4 +16,9 @@
 
     <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Tap to show info</string>
+
+    <!-- Maintainer info -->
+    <string name="materium_maintainer" translatable="false">@string/materium_maintainer_unknown</string>
+    <string name="materium_maintainer_unknown">Unknown</string>
+    <string name="materium_maintainer_title">Device maintainer</string>
 </resources>
