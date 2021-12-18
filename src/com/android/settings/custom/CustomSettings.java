@@ -54,6 +54,7 @@ public class CustomSettings extends DashboardFragment implements
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
     private static final String KEY_VOLTE_ICON_STYLE = "volte_icon_style";
     private static final String KEY_VOWIFI_ICON_STYLE = "vowifi_icon_style";
+    private static final String KEY_VOLTE_VOWIFI_OVERRIDE = "volte_vowifi_override";
     private static final String KEY_SHOW_ROAMING = "roaming_indicator_icon";
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
     private static final String KEY_SHOW_DATA_DISABLED = "data_disabled_icon";
@@ -67,6 +68,7 @@ public class CustomSettings extends DashboardFragment implements
     private SwitchPreference mGamesSpoof;
     private CustomSystemSeekBarPreference mVolteIconStyle;
     private CustomSystemSeekBarPreference mVowifiIconStyle;
+    private SwitchPreference mOverride;
     private SwitchPreference mShowRoaming;
     private SwitchPreference mShowFourg;
     private SwitchPreference mDataDisabled;
@@ -83,6 +85,7 @@ public class CustomSettings extends DashboardFragment implements
 	mCombinedIcons = (SwitchPreference) findPreference(KEY_COMBINED_ICONS);
 	mVolteIconStyle = (CustomSystemSeekBarPreference) findPreference(KEY_VOLTE_ICON_STYLE);
 	mVowifiIconStyle = (CustomSystemSeekBarPreference) findPreference(KEY_VOWIFI_ICON_STYLE);
+	mOverride = (SwitchPreference) findPreference(KEY_VOLTE_VOWIFI_OVERRIDE);
 	mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
 	mShowFourg = (SwitchPreference) findPreference(KEY_SHOW_FOURG);
 	mDataDisabled = (SwitchPreference) findPreference(KEY_SHOW_DATA_DISABLED);
@@ -92,6 +95,7 @@ public class CustomSettings extends DashboardFragment implements
             prefScreen.removePreference(mCombinedIcons);
 	    prefScreen.removePreference(mVolteIconStyle);
 	    prefScreen.removePreference(mVowifiIconStyle);
+	    prefScreen.removePreference(mOverride);
 	    prefScreen.removePreference(mShowRoaming);
 	    prefScreen.removePreference(mShowFourg);
 	    prefScreen.removePreference(mDataDisabled);
@@ -197,6 +201,7 @@ public class CustomSettings extends DashboardFragment implements
                         keys.add(KEY_COMBINED_ICONS);
 			keys.add(KEY_VOLTE_ICON_STYLE);
 			keys.add(KEY_VOWIFI_ICON_STYLE);
+			keys.add(KEY_VOLTE_VOWIFI_OVERRIDE);
 			keys.add(KEY_SHOW_ROAMING);
 			keys.add(KEY_SHOW_FOURG);
 			keys.add(KEY_SHOW_DATA_DISABLED);
