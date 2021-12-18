@@ -75,6 +75,16 @@
             android:defaultValue="0"
             android:max="9"
             settings:min="0"
+	    settings:units="" />
+	
+        <org.eu.materium.support.preferences.CustomSystemSeekBarPreference
+            android:key="vowifi_icon_style"
+            android:icon="@drawable/ic_vowifi"
+            android:title="@string/vowifi_icon_title"
+            android:summary="@string/vowifi_icon_summary"
+            android:defaultValue="0"
+            android:max="8"
+            settings:min="0"
             settings:units="" />
 	
 	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
