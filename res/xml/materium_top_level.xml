@@ -119,5 +119,12 @@
             android:icon="@drawable/ic_three_finger_gesture"
             android:title="@string/three_finger_gesture"
             android:summary="@string/three_finger_gesture_summary"
-            android:defaultValue="false" />
+	    android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="navbar_visibility"
+            android:icon="@drawable/ic_navbar"
+            android:title="@string/navbar_visibility_title"
+	    android:summary="@string/navbar_visibility_summary"
+	    android:defaultValue="true" />
 </PreferenceScreen>

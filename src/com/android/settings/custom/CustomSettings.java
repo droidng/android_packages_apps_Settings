@@ -18,16 +18,20 @@ package com.android.settings.custom;
 
 import java.util.List;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.text.TextUtils;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.custom.Utils;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -35,6 +39,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import org.eu.materium.support.preferences.CustomSystemSeekBarPreference;
+
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.providers.LineageSettings;
 
 @SearchIndexable
 public class CustomSettings extends DashboardFragment implements
@@ -49,6 +56,7 @@ public class CustomSettings extends DashboardFragment implements
     private static final String KEY_SHOW_ROAMING = "roaming_indicator_icon";
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
     private static final String KEY_SHOW_DATA_DISABLED = "data_disabled_icon";
+    private static final String NAVBAR_VISIBILITY = "navbar_visibility";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
@@ -59,6 +67,10 @@ public class CustomSettings extends DashboardFragment implements
     private SwitchPreference mShowRoaming;
     private SwitchPreference mShowFourg;
     private SwitchPreference mDataDisabled;
+    private SwitchPreference mNavbarVisibility;
+
+    private boolean mIsNavSwitchingMode = false;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,10 +102,42 @@ public class CustomSettings extends DashboardFragment implements
 	mGamesSpoof = (SwitchPreference) prefScreen.findPreference(KEY_GAMES_SPOOF);
         mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
         mGamesSpoof.setOnPreferenceChangeListener(this);
+
+	ContentResolver resolver = getActivity().getContentResolver();
+        mHandler = new Handler();
+
+        mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
+
+        boolean showing = LineageSettings.System.getIntForUser(resolver,
+                LineageSettings.System.FORCE_SHOW_NAVBAR,
+                Utils.hasNavbarByDefault(getActivity()) ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+        mNavbarVisibility.setChecked(showing);
+        mNavbarVisibility.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+	ContentResolver resolver = getActivity().getContentResolver();
+
+        if (preference == mNavbarVisibility) {
+            if (mIsNavSwitchingMode) {
+                return false;
+            }
+            mIsNavSwitchingMode = true;
+            boolean showing = ((Boolean)newValue);
+            LineageSettings.System.putIntForUser(resolver, LineageSettings.System.FORCE_SHOW_NAVBAR,
+                    showing ? 1 : 0, UserHandle.USER_CURRENT);
+            mNavbarVisibility.setChecked(showing);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsNavSwitchingMode = false;
+                }
+            }, 1500);
+
+            return true;
+        }
+
         if (preference == mGamesSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
