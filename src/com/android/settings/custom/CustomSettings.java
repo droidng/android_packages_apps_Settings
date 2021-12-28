@@ -57,6 +57,7 @@ public class CustomSettings extends DashboardFragment implements
     private static final String KEY_SHOW_FOURG = "show_fourg_icon";
     private static final String KEY_SHOW_DATA_DISABLED = "data_disabled_icon";
     private static final String NAVBAR_VISIBILITY = "navbar_visibility";
+    private static final String HWKEYS_DISABLED = "hardware_keys_disable";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
@@ -68,6 +69,7 @@ public class CustomSettings extends DashboardFragment implements
     private SwitchPreference mShowFourg;
     private SwitchPreference mDataDisabled;
     private SwitchPreference mNavbarVisibility;
+    private SwitchPreference mHardwareKeysDisable;
 
     private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
@@ -81,6 +83,7 @@ public class CustomSettings extends DashboardFragment implements
 	mShowRoaming = (SwitchPreference) findPreference(KEY_SHOW_ROAMING);
 	mShowFourg = (SwitchPreference) findPreference(KEY_SHOW_FOURG);
 	mDataDisabled = (SwitchPreference) findPreference(KEY_SHOW_DATA_DISABLED);
+	mHardwareKeysDisable = (SwitchPreference) findPreference(HWKEYS_DISABLED);
 
 	if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mCombinedIcons);
@@ -113,11 +116,22 @@ public class CustomSettings extends DashboardFragment implements
                 Utils.hasNavbarByDefault(getActivity()) ? 1 : 0, UserHandle.USER_CURRENT) != 0;
         mNavbarVisibility.setChecked(showing);
         mNavbarVisibility.setOnPreferenceChangeListener(this);
+
+	if (isKeyDisablerSupported(getActivity())) {
+            mHardwareKeysDisable.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(mHardwareKeysDisable);
+        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
 	ContentResolver resolver = getActivity().getContentResolver();
+
+	if (preference == mHardwareKeysDisable) {
+            // do nothing for now
+            return true;
+        }
 
         if (preference == mNavbarVisibility) {
             if (mIsNavSwitchingMode) {
@@ -144,6 +158,11 @@ public class CustomSettings extends DashboardFragment implements
             return true;
         }
 	return true;
+    }
+
+    private static boolean isKeyDisablerSupported(Context context) {
+        final LineageHardwareManager hardware = LineageHardwareManager.getInstance(context);
+        return hardware.isSupported(LineageHardwareManager.FEATURE_KEY_DISABLE);
     }
 
     @Override
@@ -182,6 +201,9 @@ public class CustomSettings extends DashboardFragment implements
                     if (TextUtils.isEmpty(displayCutout)) {
                         keys.add(KEY_FORCE_FULL_SCREEN);
                     }
+
+		    if (!isKeyDisablerSupported(context))
+                        keys.add(HWKEYS_DISABLED);
 
                     return keys;
                 }

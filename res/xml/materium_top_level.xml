@@ -127,4 +127,11 @@
             android:title="@string/navbar_visibility_title"
 	    android:summary="@string/navbar_visibility_summary"
 	    android:defaultValue="true" />
+
+	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+            android:key="hardware_keys_disable"
+            android:icon="@drawable/ic_buttons"
+            android:title="@string/hwkeys_disabled_title"
+            android:summary="@string/hwkeys_disabled_summary"
+	    android:defaultValue="false" />
 </PreferenceScreen>
