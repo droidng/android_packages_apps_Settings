@@ -19,6 +19,7 @@ package com.android.settings.custom;
 import java.util.List;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
@@ -38,8 +39,10 @@ public class CustomSettings extends DashboardFragment {
     private static final String TAG = "CustomSettings";
 
     private static final String KEY_COMBINED_ICONS = "combined_status_bar_signal_icons";
+    private static final String KEY_FORCE_FULL_SCREEN = "display_cutout_force_fullscreen_settings";
 
     private SwitchPreference mCombinedIcons;
+    private SwitchPreference mShowCutoutForce;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,15 @@ public class CustomSettings extends DashboardFragment {
 	if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(mCombinedIcons);
 	}
+        Context mContext = getActivity().getApplicationContext();
+
+	final String displayCutout =
+            mContext.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+
+        if (TextUtils.isEmpty(displayCutout)) {
+            mShowCutoutForce = (SwitchPreference) findPreference(KEY_FORCE_FULL_SCREEN);
+            prefScreen.removePreference(mShowCutoutForce);
+        }
     }
 
     @Override
@@ -77,6 +89,13 @@ public class CustomSettings extends DashboardFragment {
                     List<String> keys = super.getNonIndexableKeys(context);
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(KEY_COMBINED_ICONS);
+                    }
+
+	                final String displayCutout =
+                        context.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+
+                    if (TextUtils.isEmpty(displayCutout)) {
+                        keys.add(KEY_FORCE_FULL_SCREEN);
                     }
 
                     return keys;
