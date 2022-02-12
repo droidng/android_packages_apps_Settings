@@ -56,4 +56,11 @@
                  android:targetPackage="com.android.settings"
                  android:targetClass="com.android.settings.custom.cutout.DisplayCutoutForceFullscreenActivity"/>
         </Preference>
+
+        <!-- Unlock FPS for specific games -->
+        <SwitchPreference
+            android:key="use_games_spoof"
+            android:icon="@drawable/ic_backup"
+            android:title="@string/use_games_spoof_title"
+            android:summary="@string/use_games_spoof_summary" />
 </PreferenceScreen>

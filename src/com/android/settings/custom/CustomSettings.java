@@ -21,6 +21,7 @@ import java.util.List;
 import android.content.Context;
 import android.text.TextUtils;
 import android.os.Bundle;
+import android.os.SystemProperties;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
@@ -34,15 +35,20 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class CustomSettings extends DashboardFragment {
+public class CustomSettings extends DashboardFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "CustomSettings";
 
     private static final String KEY_COMBINED_ICONS = "combined_status_bar_signal_icons";
     private static final String KEY_FORCE_FULL_SCREEN = "display_cutout_force_fullscreen_settings";
+    private static final String KEY_GAMES_SPOOF = "use_games_spoof";
+
+    private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
     private SwitchPreference mCombinedIcons;
     private SwitchPreference mShowCutoutForce;
+    private SwitchPreference mGamesSpoof;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +68,20 @@ public class CustomSettings extends DashboardFragment {
             mShowCutoutForce = (SwitchPreference) findPreference(KEY_FORCE_FULL_SCREEN);
             prefScreen.removePreference(mShowCutoutForce);
         }
+
+	mGamesSpoof = (SwitchPreference) prefScreen.findPreference(KEY_GAMES_SPOOF);
+        mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
+        mGamesSpoof.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mGamesSpoof) {
+            boolean value = (Boolean) newValue;
+            SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
+            return true;
+        }
+	return true;
     }
 
     @Override
@@ -87,13 +107,12 @@ public class CustomSettings extends DashboardFragment {
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
+
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(KEY_COMBINED_ICONS);
                     }
 
-	                final String displayCutout =
-                        context.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
-
+	            final String displayCutout = context.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
                     if (TextUtils.isEmpty(displayCutout)) {
                         keys.add(KEY_FORCE_FULL_SCREEN);
                     }
