@@ -64,7 +64,7 @@ public class CustomSettings extends DashboardFragment implements
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
 
     private SwitchPreference mCombinedIcons;
-    private SwitchPreference mShowCutoutForce;
+    private Preference mShowCutoutForce;
     private SwitchPreference mGamesSpoof;
     private CustomSystemSeekBarPreference mVolteIconStyle;
     private CustomSystemSeekBarPreference mVowifiIconStyle;
@@ -106,7 +106,7 @@ public class CustomSettings extends DashboardFragment implements
             mContext.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
 
         if (TextUtils.isEmpty(displayCutout)) {
-            mShowCutoutForce = (SwitchPreference) findPreference(KEY_FORCE_FULL_SCREEN);
+            mShowCutoutForce = (Preference) findPreference(KEY_FORCE_FULL_SCREEN);
             prefScreen.removePreference(mShowCutoutForce);
         }
 
