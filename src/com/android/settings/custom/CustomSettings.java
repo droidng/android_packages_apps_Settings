@@ -16,6 +16,15 @@
 
 package com.android.settings.custom;
 
+import java.util.List;
+
+import android.content.Context;
+import android.os.Bundle;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
+
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
@@ -27,6 +36,21 @@ import com.android.settingslib.search.SearchIndexable;
 public class CustomSettings extends DashboardFragment {
 
     private static final String TAG = "CustomSettings";
+
+    private static final String KEY_COMBINED_ICONS = "combined_status_bar_signal_icons";
+
+    private SwitchPreference mCombinedIcons;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+	mCombinedIcons = (SwitchPreference) findPreference(KEY_COMBINED_ICONS);
+
+	if (!TelephonyUtils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(mCombinedIcons);
+	}
+    }
 
     @Override
     public int getMetricsCategory() {
@@ -47,5 +71,15 @@ public class CustomSettings extends DashboardFragment {
      * For Search.
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.materium_top_level);
+            new BaseSearchIndexProvider(R.xml.materium_top_level) {
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    if (!TelephonyUtils.isVoiceCapable(context)) {
+                        keys.add(KEY_COMBINED_ICONS);
+                    }
+
+                    return keys;
+                }
+            };
 }

@@ -37,5 +37,12 @@
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.LockScreenActivity" />
-	</Preference>
+        </Preference>
+
+        <org.eu.materium.support.preferences.SystemSettingSwitchPreference
+            android:key="combined_status_bar_signal_icons"
+            android:icon="@drawable/ic_wifi_signal_4"
+            android:title="@string/combined_status_bar_signal_icons_title"
+            android:summary="@string/combined_status_bar_signal_icons_summary"
+            android:defaultValue="false" />
 </PreferenceScreen>
