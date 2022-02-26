@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">LineageOS lકાયદાકીય</string>
+    <string name="lineagelicense_title">Materium lકાયદાકીય</string>
     <string name="unlock_scramble_pin_layout_title">લેઆઉટ આમતેમ કરો</string>
     <string name="unlock_scramble_pin_layout_summary">ડિવાઇસ અનલૉક કરો ત્યારે PIN લેઆઉટ આમતેમ કરો</string>
     <string name="lockpattern_settings_enable_error_path_title">પૅટર્ન ખામી દર્શાવો</string>

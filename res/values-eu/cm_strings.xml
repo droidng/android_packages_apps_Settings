@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">LineageOS lizentzia</string>
+    <string name="lineagelicense_title">Materium lizentzia</string>
     <string name="volume_link_notification_title">Lotu dei doinuaren eta jakinarazpenen bolumenak</string>
     <string name="unlock_scramble_pin_layout_title">Zorizko diseinua</string>
     <string name="unlock_scramble_pin_layout_summary">PIN zenbakiaren antolaketa nahastu gailua desblokeatzean</string>

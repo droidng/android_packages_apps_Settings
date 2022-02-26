@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">LineageOS licenca</string>
+    <string name="lineagelicense_title">Materium licenca</string>
     <string name="volume_link_notification_title">Spoji glasnoće tona zvona &amp; obavijesti</string>
     <string name="unlock_scramble_pin_layout_title">Nasumičan raspored</string>
     <string name="unlock_scramble_pin_layout_summary">Nasumičan PIN raspored pri otključavanju uređaja</string>

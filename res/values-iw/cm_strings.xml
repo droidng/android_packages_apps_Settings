@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">LineageOS משפטי</string>
+    <string name="lineagelicense_title">Materium משפטי</string>
     <string name="volume_link_notification_title">קשר את עוצמות הצלצול וההתראות</string>
     <string name="unlock_scramble_pin_layout_title">ערבב פריסה</string>
     <string name="unlock_scramble_pin_layout_summary">ערבב פריסת PIN בעת פתיחת המכשיר</string>

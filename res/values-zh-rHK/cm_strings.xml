@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">LineageOS 法律條款</string>
+    <string name="lineagelicense_title">Materium 法律條款</string>
     <string name="unlock_scramble_pin_layout_title">無序佈局</string>
     <string name="unlock_scramble_pin_layout_summary">解鎖裝置時使用無序 PIN 佈局</string>
     <string name="lockpattern_settings_enable_error_path_title">顯示圖樣錯誤</string>

@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">ADB와 같은 디버깅 모드 사용시 루트 권한을 사용합니다.</string>
     <string name="backup_transport_setting_label">백업 제공자 변경</string>
     <string name="backup_transport_title">백업 제공자 선택</string>
-    <string name="lineagelicense_title">LineageOS 법적 고지</string>
+    <string name="lineagelicense_title">Materium 법적 고지</string>
     <string name="volume_link_notification_title">벨소리 볼륨과 알림 볼륨 연결</string>
     <string name="unlock_scramble_pin_layout_title">레이아웃 섞기</string>
     <string name="unlock_scramble_pin_layout_summary">장치를 잠금 해제할 때 PIN 레이아웃 섞기</string>

@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">允许以 root 身份运行 Android 调试</string>
     <string name="backup_transport_setting_label">更改备份提供商</string>
     <string name="backup_transport_title">选择备份提供商</string>
-    <string name="lineagelicense_title">LineageOS 法律信息</string>
+    <string name="lineagelicense_title">Materium 法律信息</string>
     <string name="volume_link_notification_title">链接铃声和通知的音量</string>
     <string name="unlock_scramble_pin_layout_title">乱序布局</string>
     <string name="unlock_scramble_pin_layout_summary">当解锁设备时使用乱序 PIN 布局</string>

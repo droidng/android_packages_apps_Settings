@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Rootolva engedélyezi az Android hibakeresését</string>
     <string name="backup_transport_setting_label">Mentési-szolgáltatás megváltoztatása</string>
     <string name="backup_transport_title">Mentési-szolgáltatás kiválasztása</string>
-    <string name="lineagelicense_title">LineageOS jogi nyilatkozat</string>
+    <string name="lineagelicense_title">Materium jogi nyilatkozat</string>
     <string name="volume_link_notification_title">Értesítési és csengőhangok összekapcsolása</string>
     <string name="unlock_scramble_pin_layout_title">Szoros elrendezés</string>
     <string name="unlock_scramble_pin_layout_summary">PIN szoros elrendezése az eszköz feloldásakor</string>

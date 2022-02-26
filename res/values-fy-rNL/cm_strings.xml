@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="adb_enable_root">Root-debugging</string>
     <string name="adb_enable_summary_root">Android-debugging as root tastean</string>
-    <string name="lineagelicense_title">Juridyske ynformaasje fan LineageOS</string>
+    <string name="lineagelicense_title">Juridyske ynformaasje fan Materium</string>
     <string name="volume_link_notification_title">Folume beltoan en meldingen keppelje</string>
     <string name="unlock_scramble_pin_layout_title">Lay-out hutselje</string>
     <string name="unlock_scramble_pin_layout_summary">Pin-lay-out troch inoar hutselje by apparaat ûntskoatteljen</string>
