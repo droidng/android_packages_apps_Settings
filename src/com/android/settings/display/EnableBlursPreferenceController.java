@@ -20,6 +20,7 @@ import static android.view.CrossWindowBlurListeners.CROSS_WINDOW_BLUR_SUPPORTED;
 
 import android.content.Context;
 import android.provider.Settings;
+import android.os.SystemProperties;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -68,7 +69,7 @@ public final class EnableBlursPreferenceController extends AbstractPreferenceCon
     @Override
     public void updateState(Preference preference) {
         boolean isEnabled = Settings.Global.getInt(mContext.getContentResolver(),
-                    Settings.Global.DISABLE_WINDOW_BLURS, 0) == 0;
+                    Settings.Global.DISABLE_WINDOW_BLURS, SystemProperties.getInt("persist.sys.sf.disable_blurs", 0)) == 0;
         ((SwitchPreference) preference).setChecked(isEnabled);
     }
 }
