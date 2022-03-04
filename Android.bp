@@ -45,6 +45,11 @@ android_library {
     ],
 
     srcs: ["src/**/*.java"],
+    
+    resource_dirs: [
+         "res",
+	 "res-mat",
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
