@@ -146,6 +146,15 @@
         settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
+        android:key="top_level_materium"
+        android:title="@string/materium_top_level_title"
+        android:summary="@string/materium_top_level_desc"
+        android:icon="@drawable/ic_settings_materium"
+        android:order="-25"
+        android:fragment="com.android.settings.custom.CustomSettings"
+        settings:highlightableMenuKey="@string/materium_top_level_menu_key"/>
+
+    <com.android.settings.widget.HomepagePreference
         android:key="top_level_emergency"
         android:title="@string/emergency_settings_preference_title"
         android:summary="@string/emergency_dashboard_summary"

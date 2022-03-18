@@ -25,6 +25,15 @@
     <!-- Settings version info -->
     <string name="materium_version">Materium version</string>
 
+    <!-- Settings custom fragments -->
+    <string name="materium_top_level_title">Materium customizations</string>
+    <string name="materium_top_level_desc">Make it yours!</string>
+
+    <!-- System UI tuner -->
+    <string name="lockscreen_shortcuts">Lockscreen shortcuts</string>
+    <string name="navbar_tuner_title">Navbar tuner</string>
+    <string name="navbar_tuner_summary">Customize your navbar layout</string>
+
     <!-- SELinux Status -->
     <string name="selinux_status">SELinux status</string>
     <string name="selinux_status_disabled">Disabled</string>
