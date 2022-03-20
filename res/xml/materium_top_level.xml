@@ -17,6 +17,7 @@
   android:title="@string/materium_top_level_title">
         <org.eu.materium.support.preferences.SecureSettingListPreference
             android:key="power_menu_type"
+            android:icon="@drawable/ic_settings_power"
             android:title="@string/power_menu_type"
             android:summary="%s"
             android:dialogTitle="@string/power_menu_type"
@@ -26,6 +27,7 @@
 
 	<Preference
             android:title="@string/navbar_tuner_title"
+            android:icon="@drawable/ic_phone_android"
             android:summary="@string/navbar_tuner_summary" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
@@ -33,6 +35,7 @@
 	</Preference>
 	
 	<Preference
+            android:icon="@drawable/ic_screen_lock"
             android:title="@string/lockscreen_shortcuts">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
@@ -41,7 +44,7 @@
 
         <org.eu.materium.support.preferences.SystemSettingSwitchPreference
             android:key="combined_status_bar_signal_icons"
-            android:icon="@drawable/ic_wifi_signal_4"
+            android:icon="@drawable/ic_wifi"
             android:title="@string/combined_status_bar_signal_icons_title"
             android:summary="@string/combined_status_bar_signal_icons_summary"
 	    android:defaultValue="false" />
