@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">السماح بتشغيل مصحح أخطاء أندرويد بصلاحية روت</string>
     <string name="backup_transport_setting_label">تغيير موفر النسخ الاحتياطي</string>
     <string name="backup_transport_title">حدد موفر النسخ الاحتياطي</string>
-    <string name="lineagelicense_title">قانون Materium</string>
+    <string name="lineagelicense_title">قانون droid-ng</string>
     <string name="volume_link_notification_title">ربط حجم صوت النغمة وصوت الإشعارات</string>
     <string name="unlock_scramble_pin_layout_title">تخطيط الترميز</string>
     <string name="unlock_scramble_pin_layout_summary">تخطيط رقم PIN المرمز عند إلغاء تأمين الجهاز</string>

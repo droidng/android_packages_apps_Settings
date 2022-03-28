@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Ceadaich gun dèid dì-bhugachadh Android a ruith ’na root</string>
     <string name="backup_transport_setting_label">Atharraich solaraiche nan lethbhreacan-glèidhidh</string>
     <string name="backup_transport_title">Tagh solaraiche nan lethbhreacan-glèidhidh</string>
-    <string name="lineagelicense_title">Sgrìobhainnean laghail Materium</string>
+    <string name="lineagelicense_title">Sgrìobhainnean laghail droid-ng</string>
     <string name="volume_link_notification_title">Co-cheangail àirde na seirme ⁊ nam brathan</string>
     <string name="unlock_scramble_pin_layout_title">Cuir a’ cho-dhealbhachd tro chèile</string>
     <string name="unlock_scramble_pin_layout_summary">Cuir co-dhealbhachd a’ PIN tro chèile nuair a bheirear a’ ghlas far an uidheim</string>

@@ -29,7 +29,7 @@
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_lock_screen_notif"/>
 
-        <org.eu.materium.support.preferences.SecureSettingListPreference
+        <org.eu.droid_ng.support.preferences.SecureSettingListPreference
             android:key="face_unlock_method"
             android:title="@string/face_unlock_method_title"
             android:summary="%s"

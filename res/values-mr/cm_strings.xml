@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">Materium लिगल</string>
+    <string name="lineagelicense_title">droid-ng लिगल</string>
     <string name="unlock_scramble_pin_layout_title">मांडणी स्क्रॅम्बल करा</string>
     <string name="unlock_scramble_pin_layout_summary">डिव्हाइस अनलॉक करताना पिन मांडणी स्क्रॅम्बल करा</string>
     <string name="lockpattern_settings_enable_error_path_title">पॅटर्न त्रुटी दर्शवा</string>

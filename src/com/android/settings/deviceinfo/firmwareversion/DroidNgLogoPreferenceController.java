@@ -30,14 +30,14 @@ import androidx.preference.Preference;
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 
-public class MateriumLogoPreferenceController extends BasePreferenceController {
+public class DroidNgLogoPreferenceController extends BasePreferenceController {
 
     private static final Uri INTENT_URI_DATA = Uri.parse("https://materium.eu.org/");
-    private static final String TAG = "MateriumLogoPreferenceCtrl";
+    private static final String TAG = "DroidNgLogoPreferenceCtrl";
 
     private final PackageManager mPackageManager;
 
-    public MateriumLogoPreferenceController(Context context, String preferenceKey) {
+    public DroidNgLogoPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
         mPackageManager = mContext.getPackageManager();
     }

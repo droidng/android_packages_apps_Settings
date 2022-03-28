@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">Materium ಕಾನೂನು</string>
+    <string name="lineagelicense_title">droid-ng ಕಾನೂನು</string>
     <string name="volume_link_notification_title">ಗಂಟೆನಾದ &amp; ಸೂಚನೆ ಶಬ್ದಮಟ್ಟ ತಳಕಿಸು</string>
     <string name="unlock_scramble_pin_layout_title">ವಿನ್ಯಾಸವನ್ನು ಅಸ್ತವ್ಯಸ್ತಗೊಳಿಸು</string>
     <string name="unlock_scramble_pin_layout_summary">ಸಾಧನವನ್ನು ಅನ್‍ಲಾಕ್ ಮಾಡುವಾಗ ಪಿನ್ ವಿನ್ಯಾಸವನ್ನು ಅಸ್ತವ್ಯಸ್ತಗೊಳಿಸು</string>

@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">Materium juridisk</string>
+    <string name="lineagelicense_title">droid-ng juridisk</string>
     <string name="unlock_scramble_pin_layout_title">Endre layout</string>
     <string name="unlock_scramble_pin_layout_summary">Endre PIN layout når enheten låses opp</string>
     <string name="lock_settings_picker_pattern_size_message">Velg størrelse på mønster</string>

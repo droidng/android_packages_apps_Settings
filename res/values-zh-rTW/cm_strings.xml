@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">允許以 root 身份進行 Android 偵錯</string>
     <string name="backup_transport_setting_label">變更備份服務提供者</string>
     <string name="backup_transport_title">選擇備份服務提供者</string>
-    <string name="lineagelicense_title">Materium 法律條款</string>
+    <string name="lineagelicense_title">droid-ng 法律條款</string>
     <string name="volume_link_notification_title">連結鈴聲與通知音量</string>
     <string name="unlock_scramble_pin_layout_title">亂序佈局</string>
     <string name="unlock_scramble_pin_layout_summary">解鎖裝置時使用亂序 PIN 碼佈局</string>

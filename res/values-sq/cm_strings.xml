@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Lejoni ekzekutimin e korrigjimit e gabimeve të Android si root</string>
     <string name="backup_transport_setting_label">Ndryshoni ofruesin e rezervës</string>
     <string name="backup_transport_title">Zgjidhni siguruesin e rezervës</string>
-    <string name="lineagelicense_title">Liçensa e Materium</string>
+    <string name="lineagelicense_title">Liçensa e droid-ng</string>
     <string name="volume_link_notification_title">Lidh volumin e ziles &amp; njoftimeve</string>
     <string name="unlock_scramble_pin_layout_title">Paraqitja e përplasjes</string>
     <string name="unlock_scramble_pin_layout_summary">Përzieni paraqitjen e kodit PIN kur zhbllokoni pajisjen</string>

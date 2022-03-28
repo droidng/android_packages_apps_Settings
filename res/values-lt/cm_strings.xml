@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineagelicense_title">Teisinė „Materium“ informacija</string>
+    <string name="lineagelicense_title">Teisinė „droid-ng“ informacija</string>
     <string name="unlock_scramble_pin_layout_title">Sumaišyti išdėstymą</string>
     <string name="unlock_scramble_pin_layout_summary">Atrakinant įrenginį sumaišyti PIN išdėstymą</string>
     <string name="lockpattern_settings_enable_error_path_title">Rodyti modelio klaidą</string>

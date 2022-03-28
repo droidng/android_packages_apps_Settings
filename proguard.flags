@@ -71,4 +71,4 @@
 -keep class androidx.window.** { *; }
 -dontwarn androidx.window.extensions.**
 
--keep class org.eu.materium.** { *; }
+-keep class org.eu.droid_ng.** { *; }

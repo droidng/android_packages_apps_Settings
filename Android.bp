@@ -48,7 +48,7 @@ android_library {
     
     resource_dirs: [
          "res",
-	 "res-mat",
+	 "res-ng",
     ],
 
     static_libs: [

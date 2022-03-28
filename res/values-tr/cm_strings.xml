@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Android hata ayıklamanın rootlu olarak çalışmasına izin verin</string>
     <string name="backup_transport_setting_label">Yedekleme sağlayıcısını değiştir</string>
     <string name="backup_transport_title">Yedekleme sağlayıcısını seçin</string>
-    <string name="lineagelicense_title">Materium yasal</string>
+    <string name="lineagelicense_title">droid-ng yasal</string>
     <string name="volume_link_notification_title">Zil sesi ve bildirim ses düzeyini bağla</string>
     <string name="unlock_scramble_pin_layout_title">Düzeni karıştır</string>
     <string name="unlock_scramble_pin_layout_summary">Cihaz kilidini açarken PIN düzenini karıştırır</string>

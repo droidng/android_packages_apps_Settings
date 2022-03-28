@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Project Materium
+ * Copyright (C) 2022 droid-ng
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import org.eu.materium.support.preferences.CustomSystemSeekBarPreference;
+import org.eu.droid_ng.support.preferences.CustomSystemSeekBarPreference;
 
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.providers.LineageSettings;
@@ -180,7 +180,7 @@ public class CustomSettings extends DashboardFragment implements
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.materium_top_level;
+        return R.xml.droidng_top_level;
     }
 
     @Override
@@ -192,7 +192,7 @@ public class CustomSettings extends DashboardFragment implements
      * For Search.
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.materium_top_level) {
+            new BaseSearchIndexProvider(R.xml.droidng_top_level) {
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);

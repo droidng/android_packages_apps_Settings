@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Uitvoeren van Android foutopsporing als root toestaan</string>
     <string name="backup_transport_setting_label">Wijzig back-up provider</string>
     <string name="backup_transport_title">Kies back-up provider</string>
-    <string name="lineagelicense_title">Juridische informatie van Materium</string>
+    <string name="lineagelicense_title">Juridische informatie van droid-ng</string>
     <string name="volume_link_notification_title">Volume beltoon en meldingen koppelen</string>
     <string name="unlock_scramble_pin_layout_title">Lay-out husselen</string>
     <string name="unlock_scramble_pin_layout_summary">PIN-lay-out door elkaar husselen bij apparaat ontgrendelen</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2022 Project Materium
+     Copyright (C) 2022 droid-ng
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -14,8 +14,8 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-  android:title="@string/materium_top_level_title">
-        <org.eu.materium.support.preferences.SecureSettingListPreference
+  android:title="@string/ng_top_level_title">
+        <org.eu.droid_ng.support.preferences.SecureSettingListPreference
             android:key="power_menu_type"
             android:icon="@drawable/ic_settings_power"
             android:title="@string/power_menu_type"
@@ -42,7 +42,7 @@
                 android:targetClass="com.android.systemui.tuner.LockScreenActivity" />
         </Preference>
 
-        <org.eu.materium.support.preferences.SystemSettingSwitchPreference
+        <org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="combined_status_bar_signal_icons"
             android:icon="@drawable/ic_wifi"
             android:title="@string/combined_status_bar_signal_icons_title"
@@ -67,7 +67,7 @@
             android:title="@string/use_games_spoof_title"
 	    android:summary="@string/use_games_spoof_summary" />
 
-        <org.eu.materium.support.preferences.CustomSystemSeekBarPreference
+        <org.eu.droid_ng.support.preferences.CustomSystemSeekBarPreference
             android:key="volte_icon_style"
             android:icon="@drawable/ic_volte"
             android:title="@string/volte_icon_title"
@@ -77,7 +77,7 @@
             settings:min="0"
 	    settings:units="" />
 	
-        <org.eu.materium.support.preferences.CustomSystemSeekBarPreference
+        <org.eu.droid_ng.support.preferences.CustomSystemSeekBarPreference
             android:key="vowifi_icon_style"
             android:icon="@drawable/ic_vowifi"
             android:title="@string/vowifi_icon_title"
@@ -87,35 +87,35 @@
             settings:min="0"
 	    settings:units="" />
 
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="volte_vowifi_override"
             android:icon="@drawable/ic_vowifi"
             android:title="@string/volte_vowifi_override_title"
             android:summary="@string/volte_vowifi_override_summary"
             android:defaultValue="true"/>
 	
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
 	    android:key="roaming_indicator_icon"
             android:icon="@drawable/ic_roaming_indicator"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
 	    android:defaultValue="true"/>
 
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:icon="@drawable/ic_fourg"
             android:title="@string/show_fourg_icon_title"
             android:summary="@string/show_fourg_icon_summary"
             android:defaultValue="false"/>
 
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
 	    android:key="data_disabled_icon"
             android:icon="@drawable/ic_network_strength_4_alert"
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
             android:defaultValue="true"/>
 	
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
 	    android:key="lockscreen_battery_info"
             android:icon="@drawable/ic_battery_charging"
             android:title="@string/lockscreen_battery_info_title"
@@ -131,7 +131,7 @@
 	    android:fragment="com.crdroid.settings.fragments.sound.VolumeSteps" />
 
 	<!-- Three-fingers-swipe to screenshot -->
-        <org.eu.materium.support.preferences.SystemSettingSwitchPreference
+        <org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="three_finger_gesture"
             android:icon="@drawable/ic_three_finger_gesture"
             android:title="@string/three_finger_gesture"
@@ -145,14 +145,14 @@
 	    android:summary="@string/navbar_visibility_summary"
 	    android:defaultValue="true" />
 
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="hardware_keys_disable"
             android:icon="@drawable/ic_buttons"
             android:title="@string/hwkeys_disabled_title"
             android:summary="@string/hwkeys_disabled_summary"
 	    android:defaultValue="false" />
 
-	<org.eu.materium.support.preferences.SystemSettingSwitchPreference
+	<org.eu.droid_ng.support.preferences.SystemSettingSwitchPreference
             android:key="qs_footer_warnings"
             android:icon="@drawable/ic_key"
             android:title="@string/qs_footer_warnings_title"

@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Consenti l\'utilizzo di funzioni di debug con permessi root</string>
     <string name="backup_transport_setting_label">Cambia gestore di backup</string>
     <string name="backup_transport_title">Seleziona un gestore di backup</string>
-    <string name="lineagelicense_title">Note legali Materium</string>
+    <string name="lineagelicense_title">Note legali droid-ng</string>
     <string name="volume_link_notification_title">Collega volume suoneria e notifiche</string>
     <string name="unlock_scramble_pin_layout_title">Mescola disposizione</string>
     <string name="unlock_scramble_pin_layout_summary">Mescola la disposizione del tastierino PIN per lo sblocco del dispositivo</string>

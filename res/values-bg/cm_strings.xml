@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Разрешете отстраняване на грешки в Android с права на суперпотребител</string>
     <string name="backup_transport_setting_label">Промяна на доставчика на резервни копия</string>
     <string name="backup_transport_title">Изберете доставчик на резервни копия</string>
-    <string name="lineagelicense_title">Materium правна информация</string>
+    <string name="lineagelicense_title">droid-ng правна информация</string>
     <string name="volume_link_notification_title">Връзка между сила на звука при звънене&amp; и известия</string>
     <string name="unlock_scramble_pin_layout_title">Разбъркано оформление</string>
     <string name="unlock_scramble_pin_layout_summary">Разбъркано PIN оформление при отключване на устройството</string>

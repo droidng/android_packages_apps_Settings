@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Permitir ejecutar la depuración de Android como Superusuario</string>
     <string name="backup_transport_setting_label">Cambiar proveedor de la copia de seguridad</string>
     <string name="backup_transport_title">Seleccionar el proveedor de la copia de seguridad</string>
-    <string name="lineagelicense_title">Licencia de Materium</string>
+    <string name="lineagelicense_title">Licencia de droid-ng</string>
     <string name="volume_link_notification_title">Vincular tono y volumen de notificaciones</string>
     <string name="unlock_scramble_pin_layout_title">Disposición aleatoria</string>
     <string name="unlock_scramble_pin_layout_summary">Cambiar la disposición de los números del PIN para desbloquear el dispositivo</string>

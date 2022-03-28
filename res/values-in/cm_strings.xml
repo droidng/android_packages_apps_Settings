@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="backup_transport_setting_label">Ubah penyedia cadangan</string>
     <string name="backup_transport_title">Pilih penyedia cadangan</string>
-    <string name="lineagelicense_title">Hukum Materium</string>
+    <string name="lineagelicense_title">Hukum droid-ng</string>
     <string name="volume_link_notification_title">Hubungkan volume dering &amp; pemberitahuan</string>
     <string name="unlock_scramble_pin_layout_title">Tata letak acak</string>
     <string name="unlock_scramble_pin_layout_summary">Acak tata letak PIN saat membuka perangkat</string>

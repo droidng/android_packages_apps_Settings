@@ -22,10 +22,10 @@
     settings:keywords="@string/keywords_android_version">
 
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/materium_logo"
-        android:key="materium_logo"
+        android:layout="@layout/droidng_logo"
+        android:key="droidng_logo"
         android:clickable="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.MateriumLogoPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.DroidNgLogoPreferenceController"/>
 
     <!-- Android version -->
     <Preference
@@ -39,15 +39,15 @@
     <!-- Lineage version -->
     <Preference
         android:key="lineage_version"
-        android:title="@string/materium_version"
+        android:title="@string/ng_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
 
     <Preference
-        android:key="materium_maintainer"
-        android:title="@string/materium_maintainer_title"
-        android:summary="@string/materium_maintainer"
+        android:key="ng_maintainer"
+        android:title="@string/ng_maintainer_title"
+        android:summary="@string/ng_maintainer"
         settings:enableCopying="true"/>
 
     <!-- Security patch -->

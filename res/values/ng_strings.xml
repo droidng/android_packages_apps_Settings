@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2022 Project Materium
+<!-- Copyright (C) 2022 droid-ng
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -18,16 +18,16 @@
     <string name="device_info_protected_single_press">Tap to show info</string>
 
     <!-- Maintainer info -->
-    <string name="materium_maintainer" translatable="false">@string/materium_maintainer_unknown</string>
-    <string name="materium_maintainer_unknown">Unknown</string>
-    <string name="materium_maintainer_title">Device maintainer</string>
+    <string name="ng_maintainer" translatable="false">@string/ng_maintainer_unknown</string>
+    <string name="ng_maintainer_unknown">Unknown</string>
+    <string name="ng_maintainer_title">Device maintainer</string>
 
     <!-- Settings version info -->
-    <string name="materium_version">Materium version</string>
+    <string name="ng_version">droid-ng Version</string>
 
     <!-- Settings custom fragments -->
-    <string name="materium_top_level_title">Materium customizations</string>
-    <string name="materium_top_level_desc">Make it yours!</string>
+    <string name="ng_top_level_title">droid-ng</string>
+    <string name="ng_top_level_desc">Make it yours!</string>
 
     <!-- System UI tuner -->
     <string name="lockscreen_shortcuts">Lockscreen shortcuts</string>

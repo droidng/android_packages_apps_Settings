@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Permitir a execução da depuração Android como root</string>
     <string name="backup_transport_setting_label">Alterar provedor de cópia de segurança</string>
     <string name="backup_transport_title">Selecionar provedor de cópia de segurança</string>
-    <string name="lineagelicense_title">Licença Materium</string>
+    <string name="lineagelicense_title">Licença droid-ng</string>
     <string name="volume_link_notification_title">Associar volumes de toque e notificação</string>
     <string name="unlock_scramble_pin_layout_title">Disposição aleatória</string>
     <string name="unlock_scramble_pin_layout_summary">Apresentar aleatoriamente a disposição do teclado numérico, quando desbloquear com PIN</string>

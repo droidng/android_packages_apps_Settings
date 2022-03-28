@@ -19,7 +19,7 @@
     <string name="adb_enable_summary_root">Luba Androidi silumist juurkasutajaga</string>
     <string name="backup_transport_setting_label">Muuda varunduste pakkujat</string>
     <string name="backup_transport_title">Vali varunduste pakkuja</string>
-    <string name="lineagelicense_title">Materium juriidiline info</string>
+    <string name="lineagelicense_title">droid-ng juriidiline info</string>
     <string name="volume_link_notification_title">Ühenda helina ja teadete helitugevus</string>
     <string name="unlock_scramble_pin_layout_title">Segatud paigutus</string>
     <string name="unlock_scramble_pin_layout_summary">Sega PIN paigutust seadme lahtilukustamisel</string>
