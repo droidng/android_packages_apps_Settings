@@ -33,10 +33,16 @@
     <!-- Lineage version -->
     <Preference
         android:key="lineage_version"
-        android:title="@*lineageos.platform:string/lineage_version"
+        android:title="@*org.eu.droid_ng.platform:string/ng_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
+
+    <Preference
+	android:key="ng_maintainer"
+	android:title="@*org.eu.droid_ng.platform:string/ng_maintainer_title"
+	android:summary="@string/ng_maintainer"
+	settings:enableCopying="true"/>
 
     <!-- Security patch -->
     <Preference
