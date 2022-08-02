@@ -171,6 +171,12 @@ public class PowerUsageSummary extends PowerUsageBase implements
         }
         mBatteryTipPreferenceController.restoreInstanceState(icicle);
         updateBatteryTipFlag(icicle);
+
+        // Check availability of Smart Charging
+        Preference mSmartCharging = (Preference) findPreference("smart_charging_key");
+        if (!getResources().getBoolean(org.eu.droid_ng.platform.internal.R.bool.config_smartChargingAvailable)) {
+            getPreferenceScreen().removePreference(mSmartCharging);
+        }
     }
 
     @Override
